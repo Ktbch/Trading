@@ -1,17 +1,18 @@
-import React from "react";
+import React from 'react'
 
-export const SelectOption = ({ option, name, register }) => {
+export const SelectOption = ({ options, name, register }) => {
   return (
     <div>
-      <select {...register(name)} name={name}>
-        {option.map((option, index) => (
-          <option key={index} value={option.value}>
-            {option.label}
+      <select name={name} {...register(name)}>
+        <option>select {name} </option>
+        {options?.map((option, index) =>
+          <option key={index} value={option} name={name} >
+            {option}
           </option>
-        ))}
+				)}
       </select>
     </div>
-  );
-};
+  )
+}
 
-export default SelectOption;
+export default SelectOption

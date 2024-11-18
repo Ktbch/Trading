@@ -1,16 +1,18 @@
-import React from "react";
-import { BiLoader } from "react-icons/bi";
+import React from 'react'
+import { LoaderCmp } from '../../../components/LoaderCmp'
 
 export const FormButton = ({ buttonName, className, loading }) => {
   return (
     <button
-      className={!className ? "" : className}
-      type="submit"
+      type='submit'
+      className={!className ? '' : className}
       disabled={loading}
-    >
-      {loading ? <BiLoader /> : buttonName}
+		>
+      <span className={`${loading ? ' ' : ''}`}>
+        {loading ? <LoaderCmp /> : buttonName}
+      </span>
     </button>
-  );
-};
+  )
+}
 
-export default FormButton;
+export default FormButton
