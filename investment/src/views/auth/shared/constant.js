@@ -1,13 +1,13 @@
-export const SIGNIN_FIELDS = [
+export const SIGNIN_FIELDS=[
   {
     type: "email",
-    name: "Email",
+    name: "email",
     placeholder: "enter your email",
   },
 
   {
     type: "password",
-    name: "Pasword",
+    name: "password",
     placeholder: "enter your password",
   },
 ];
